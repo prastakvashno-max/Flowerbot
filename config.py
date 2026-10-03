@@ -26,6 +26,25 @@ FLOWERS_CATALOG = {
         "colors": ["Qizil", "Sariq", "Oq"],
         "description": "Bahoriy va nafis gul."
     },
+	[03.10.2026 20:52] Sherxon: [ keyboards.py ]
+[03.10.2026 21:59] Sherxon: import os
+import threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+# Render uchun soxta veb-server
+class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot ishlayapti!")
+
+def run_web_server():
+    port = int(os.environ.get("PORT", 8080))
+    server = HTTPServer(('0.0.0.0', port), SimpleHTTPRequestHandler)
+    server.serve_forever()
+
+# Serverni orqa fonda ishga tushirish
+threading.Thread(target=run_web_server, daemon=True).start()
     "Kaktus": {
         "price": 12000,
         "colors": ["Yashil"],
