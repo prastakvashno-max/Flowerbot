@@ -1,6 +1,6 @@
 import os
 
-BOT_TOKEN = "8827586234:AAFZV53LI4D_opgCaO-_isIkY1bcPeFzqKo"
+BOT_TOKEN = "8827586234:AAGlQGfyMpujK-HLdt6312dH6tfI-sNP25Y"
 ADMIN_IDS = [7869546163]  # Shu yerga o'zingizning Telegram ID'ingizni yozing
 
 DB_NAME = "flower_shop.db"
